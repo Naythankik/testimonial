@@ -15,19 +15,23 @@
 }
 
 body {
-  display: block;
   background: var(--heading-color);
-  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
 div.container {
-  width: 80%;
+  max-width: 1110px;
   padding: 5px;
   margin: 40px auto;
   display: grid;
   grid-template-columns: 3.8fr 1.2fr;
   column-gap: 30px;
 }
-div.container div {
+div.container article {
   border-radius: 10px;
 }
 
@@ -41,15 +45,16 @@ div.top-left-container {
   grid-template-columns: 2fr 1fr;
   column-gap: 20px;
 }
-div.first-top-container {
+article.first-top-container {
   background: var(--first-top-container-bg);
   background-image: url("./images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
+  background-position: top right 70px;
   padding: 25px;
   display: grid;
   gap: 15px;
 }
-div.second-top-container {
+article.second-top-container {
   background: var(--second-top-container-bg);
   padding: 25px;
   display: grid;
@@ -62,7 +67,7 @@ div.bottom-left-container {
   grid-template-columns: 1fr 2fr;
   column-gap: 20px;
 }
-div.second-bottom-container {
+article.second-bottom-container {
   background: var(--second-bottom-container-bg);
   padding: 25px;
   display: grid;
@@ -85,31 +90,31 @@ div.user-file {
 div.user-file h3 {
   font-size: 17px;
 }
-div.first-top-container h2,
-div.second-top-container h2,
-div.second-bottom-container h2 {
+article.first-top-container h2,
+article.second-top-container h2,
+article.second-bottom-container h2 {
   color: var(--heading-color);
 }
-div.first-top-container p,
-div.second-top-container p,
-div.second-bottom-container p {
+article.first-top-container blockquote,
+article.second-top-container blockquote,
+article.second-bottom-container blockquote {
   color: var(--text-color);
   opacity: 0.7;
-  font-size: 14px;
+  font-size: 13px;
 }
-div.right-container,
-div.first-bottom-container {
+article.right-container,
+article.first-bottom-container {
   background: var(--first-bottom-container-bg);
   padding: 25px;
   display: grid;
   gap: 15px;
 }
-div.right-container h2,
-div.first-bottom-container h2 {
+article.right-container h2,
+article.first-bottom-container h2 {
   color: var(--second-top-container-bg);
 }
-div.right-container p,
-div.first-bottom-container p {
+article.right-container blockquote,
+article.first-bottom-container blockquote {
   color: var(--text-color);
   filter: brightness(0.8);
 }
