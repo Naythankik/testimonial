@@ -1,0 +1,128 @@
+:root {
+  --first-top-container-bg: hsl(263, 55%, 52%);
+  --second-top-container-bg: hsl(217, 19%, 35%);
+  --second-bottom-container-bg: hsl(219, 29%, 14%);
+  --first-bottom-container-bg: hsl(0, 0%, 100%);
+  --text-color: hsl(0, 0%, 81%);
+  --heading-color: hsl(210, 46%, 95%);
+  --text-ff: "Barlow Semi Condensed", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--text-ff);
+}
+
+body {
+  display: block;
+  background: var(--heading-color);
+  position: relative;
+}
+div.container {
+  width: 80%;
+  padding: 5px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 3.8fr 1.2fr;
+  column-gap: 30px;
+}
+div.container div {
+  border-radius: 10px;
+}
+
+div.left-container {
+  display: grid;
+  gap: 15px;
+}
+div.top-left-container {
+  background: none;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 20px;
+}
+div.first-top-container {
+  background: var(--first-top-container-bg);
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  padding: 25px;
+  display: grid;
+  gap: 15px;
+}
+div.second-top-container {
+  background: var(--second-top-container-bg);
+  padding: 25px;
+  display: grid;
+  gap: 15px;
+}
+
+div.bottom-left-container {
+  background: none;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
+}
+div.second-bottom-container {
+  background: var(--second-bottom-container-bg);
+  padding: 25px;
+  display: grid;
+  gap: 15px;
+}
+
+div.user-info {
+  display: flex;
+  gap: 15px;
+}
+div.user-info img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+div.user-file {
+  color: var(--text-color);
+}
+
+div.user-file h3 {
+  font-size: 17px;
+}
+div.first-top-container h2,
+div.second-top-container h2,
+div.second-bottom-container h2 {
+  color: var(--heading-color);
+}
+div.first-top-container p,
+div.second-top-container p,
+div.second-bottom-container p {
+  color: var(--text-color);
+  opacity: 0.7;
+  font-size: 14px;
+}
+div.right-container,
+div.first-bottom-container {
+  background: var(--first-bottom-container-bg);
+  padding: 25px;
+  display: grid;
+  gap: 15px;
+}
+div.right-container h2,
+div.first-bottom-container h2 {
+  color: var(--second-top-container-bg);
+}
+div.right-container p,
+div.first-bottom-container p {
+  color: var(--text-color);
+  filter: brightness(0.8);
+}
+
+@media only screen and (max-width: 960px) {
+  div.container {
+    width: 90%;
+    grid-template-columns: auto;
+    gap: 25px;
+  }
+  div.top-left-container,
+  div.bottom-left-container {
+    grid-template-columns: auto;
+    gap: 25px;
+  }
+}
